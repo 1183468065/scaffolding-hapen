@@ -44,3 +44,7 @@ spring:
       test-on-return: true
       test-while-idle: true
     timeout: 1000
+
+  devtools:
+    restart:
+      enabled: false

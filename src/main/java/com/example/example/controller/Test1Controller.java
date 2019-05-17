@@ -58,8 +58,8 @@ public class Test1Controller {
     // 由于UserService模拟返回的用户信息中【没有】该权限，所以这个接口【不可以】访问
     // 如果没有登录，UnauthenticatedException
     // 如果登录了，但是没有这个权限，会报错UnauthorizedException
-    @RequiresPermissions("gradleBuild")
     @GetMapping("/gradleBuild")
+    @RequiresPermissions(value = {"gradleBuild"})
     public String gradleBuild() {
         return "gradleBuild";
     }
@@ -77,7 +77,7 @@ public class Test1Controller {
     // 由于UserService模拟返回的用户信息中有该角色，所以这个接口可访问
     // 如果没有登录，UnauthenticatedException
     // 如果登录了，但是没有该角色，会抛出UnauthorizedException
-    @RequiresRoles("python")
+    @RequiresRoles("1234567")
     @GetMapping("/python")
     public String python() {
         return "python programmer";
