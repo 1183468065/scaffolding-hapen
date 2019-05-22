@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:mysql://192.168.8.24:3306/test?useSSL=false&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8
-#    username: uhealth
-#    password: uhealth123
+    username: uhealth
+    password: uhealth123
   redis:
     host: 192.168.8.24
     port: 6379
