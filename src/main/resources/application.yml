@@ -48,3 +48,6 @@ spring:
   devtools:
     restart:
       enabled: false
+logging:
+  level:
+   gen.example.mapper: debug

@@ -47,7 +47,8 @@ public class PaginationInterceptor implements Interceptor, Serializable {
     /** mapped statement parameter index. */
     private static final int MAPPED_STATEMENT_INDEX = 0;
     /** sql id , in the mapper xml file. */
-    private static String _sql_regex = "[*]";
+//    private static String _sql_regex = "[*]";
+    private static String _sql_regex = ".*WithRowbounds*";
     /** DataBase dialect. */
     protected Dialect _dialect;
 

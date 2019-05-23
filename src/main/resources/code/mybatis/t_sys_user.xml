@@ -38,7 +38,9 @@
 			domainObjectName="SysUserEntity">
 			<property name="ignoreQualifiersAtRuntime" value="false" />
 			<columnOverride column="status"
-				javaType="com.example.enums.Status" typeHandler="com.example.mybatis.EnumTypeHandler"/>
+				javaType="com.example.enums.Status" />
+			<columnOverride column="t1"
+				javaType="com.example.enums.WorkdayEnum"/>
 		</table>
 	</context>
 
