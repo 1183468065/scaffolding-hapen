@@ -4,7 +4,7 @@ import com.example.enums.Status;
 import com.example.model.BaseEntity;
 
 
-public abstract class EntityHelper {
+public class EntityHelper {
     /**
      * Set the status and createXXX field
      * @param entity

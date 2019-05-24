@@ -39,8 +39,6 @@
 			<property name="ignoreQualifiersAtRuntime" value="false" />
 			<columnOverride column="status"
 				javaType="com.example.enums.Status" />
-			<columnOverride column="t1"
-				javaType="com.example.enums.WorkdayEnum"/>
 		</table>
 	</context>
 
