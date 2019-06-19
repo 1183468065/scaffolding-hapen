@@ -1,5 +1,5 @@
 server:
-  port: 8100
+  port: 8199
   context-path: /api
 
 spring:
@@ -51,3 +51,4 @@ spring:
 logging:
   level:
    gen.example.mapper: debug
+   com.example: debug
