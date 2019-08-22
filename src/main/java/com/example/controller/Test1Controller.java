@@ -1,9 +1,13 @@
 package com.example.controller;
 
+import com.example.utils.DateUtil;
 import org.apache.shiro.authz.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
 
 /**
  * created by CaiBaoHong at 2018/4/18 15:51<br>
@@ -16,8 +20,11 @@ public class Test1Controller {
     // 由于TestController类上没有加@RequiresAuthentication注解，
     // 不要求用户登录才能调用接口。所以hello()和a1()接口都是可以匿名访问的
     @GetMapping("/hello")
+    @ResponseBody
     public String hello() {
-        return "hello spring boot";
+        Date date = DateUtil.getNowTime();
+        String format = DateUtil.getDateFormatter("yyyy-MM-dd HH:mm:ss").format(date);
+        return "hello spring boot 11111111"+format;
     }
 
     // 游客可访问，这个有点坑，游客的意思是指：subject.getPrincipal()==null
