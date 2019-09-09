@@ -30,12 +30,12 @@ public class RabbitMQController {
     }
 
     @GetMapping("/demo/exchange/queue")
-    public String demo_exchange_queue() {
+    public String demo_exchange_queue(Integer waitTime) {
         logger.info("demo_exchange_queue start");
-        this.amqpTemplate.convertAndSend(RabbitMqConfiguration.demo_exchange, RabbitMqConfiguration.routingKey, "delay-meaagse", new MessagePostProcessor() {
+        this.amqpTemplate.convertAndSend(RabbitMqConfiguration.demo_exchange, RabbitMqConfiguration.routingKey, "delay-meaagse-"+waitTime, new MessagePostProcessor() {
             @Override
             public Message postProcessMessage(Message message) throws AmqpException {
-                message.getMessageProperties().setHeader(RabbitMqConfiguration.delayed_message_head,wait_time);
+                message.getMessageProperties().setHeader(RabbitMqConfiguration.delayed_message_head,waitTime);
                 return message;
             }
         });

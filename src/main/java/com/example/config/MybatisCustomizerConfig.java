@@ -35,7 +35,7 @@ public class MybatisCustomizerConfig implements ConfigurationCustomizer {
         configuration.addInterceptor(paginationInterceptor);
         try {
             Class<EnumTypeHandler> enumTypeHandlerClass = EnumTypeHandler.class;
-            List<Class<?>> allAssignedClass = ClazzUtil.getAllAssignedClass(EnumType.class);
+            List<Class<EnumType>> allAssignedClass = ClazzUtil.getSubClasses(EnumType.class,"com.example.enums");
             for (Class<?> assignedClass : allAssignedClass) {
                 typeHandlerRegistry.register(assignedClass, enumTypeHandlerClass);
             }
