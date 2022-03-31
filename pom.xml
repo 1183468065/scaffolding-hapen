@@ -15,7 +15,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <spring-boot.version>1.5.10.RELEASE</spring-boot.version>
+        <spring-boot.version>2.5.12</spring-boot.version>
         <jdk.version>1.8</jdk.version>
         <mybatis-spring-boot-starter.version>2.0.0</mybatis-spring-boot-starter.version>
         <alibaba.druid.version>1.0.29</alibaba.druid.version>
